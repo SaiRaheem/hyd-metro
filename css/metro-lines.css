@@ -1,0 +1,119 @@
+.line-red {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.line-blue {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.line-green {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.station-marker {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+
+.station-marker:hover {
+    transform: scale(1.2);
+    z-index: 20;
+}
+
+.station-marker.red {
+    background-color: var(--primary-color);
+}
+
+.station-marker.blue {
+    background-color: var(--secondary-color);
+}
+
+.station-marker.green {
+    background-color: var(--tertiary-color);
+}
+
+.station-marker.interchange {
+    background-color: #ff9800;
+}
+
+.metro-line {
+    position: absolute;
+    height: 6px;
+    transform-origin: left center;
+    z-index: 5;
+}
+
+.metro-line.red {
+    background-color: var(--primary-color);
+}
+
+.metro-line.blue {
+    background-color: var(--secondary-color);
+}
+
+.metro-line.green {
+    background-color: var(--tertiary-color);
+}
+
+.station-tooltip {
+    background-color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    z-index: 30;
+    max-width: 200px;
+}
+
+.station-tooltip h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.path-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.path-step i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.line-change {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0 0.5rem 2rem;
+    padding: 0.5rem;
+    background-color: #fff8e1;
+    border-radius: 4px;
+}
