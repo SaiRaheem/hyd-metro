@@ -121,7 +121,7 @@ function addStationMarkers(container) {
         marker.setAttribute('title', station.name);
         
         // Simplified positioning - in a real app, use proper coordinates
-        const position = getStationPosition(station.id);
+        const position = station.position;
         marker.style.left = `${position.x}%`;
         marker.style.top = `${position.y}%`;
         
@@ -149,21 +149,6 @@ function getLineClass(lineCode) {
         default: return 'red';
     }
 }
-
-function getStationPosition(stationId) {
-    // Simplified positioning logic - in a real app, use proper coordinates
-    if (stationId < 10) {
-        // Red line stations
-        return { x: 10 + stationId * 7, y: 30 };
-    } else if (stationId < 30) {
-        // Blue line stations
-        return { x: 40, y: 20 + (stationId - 10) * 2 };
-    } else {
-        // Green line stations
-        return { x: 30 + (stationId - 30) * 3, y: 50 + (stationId - 30) * 2 };
-    }
-}
-
 function setupJourneyPlanner() {
     const findRouteBtn = document.getElementById('find-route');
     const sourceSelect = document.getElementById('source-station');
